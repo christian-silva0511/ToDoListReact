@@ -29,8 +29,10 @@ h1{
     margin: 20px 0;
 }
 .tarefas{
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     margin: 40px auto;
+    padding: 0 16px;
 }
 .tarefas .alert-danger{
     margin: 16px 0;
