@@ -10,8 +10,8 @@
   --accent: #22c55e;
   --danger: #e93636;
   --border: #334155;
-  --ameixa-profunda: #2D1E2F;
-  --verde-eletrico: #A7F432;
+  --azul-noturno: #001621;
+  --laranja-vulcanico: #FF4103;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.4);
 }
 
@@ -24,21 +24,21 @@
 
 html, body {
   min-height: 100%;
-  background-color: var(--ameixa-profunda);
+  background-color: var(--azul-noturno);
   color: var(--text);
 }
 
 body {
   line-height: 1.5;
   padding: 24px;
-  background-color: var(--ameixa-profunda)!important;
+  background-color: var(--azul-noturno)!important;
 }
 
 .tarefas h1 {
   font-size: 2rem;
   letter-spacing: -1px;
   margin-bottom: 1rem;
-  color: var(--verde-eletrico);
+  color: var(--laranja-vulcanico);
 }
 
 .tarefas {
@@ -62,8 +62,8 @@ body {
   flex: 1 1 240px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: var(--ameixa-profunda);
-  color: var(--verde-eletrico);
+  background: var(--azul-noturno);
+  color: var(--laranja-vulcanico);
   padding: 10px 14px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -74,17 +74,17 @@ body {
 }
 
 .campos input:focus {
-  background: var(--ameixa-profunda);  
+  background: var(--azul-noturno);  
   outline: none;
-  border-color: var(--verde-eletrico);
-  box-shadow: var(--verde-eletrico);
-  color: var(--verde-eletrico);
+  border-color: var(--laranja-vulcanico);
+  box-shadow: var(--laranja-vulcanico);
+  color: var(--laranja-vulcanico);
 }
 
 .campos .adicionar,
 .btn-primary {
-  color: var(--ameixa-profunda);
-  background: var(--verde-eletrico);
+  color: var(--azul-noturno);
+  background: var(--laranja-vulcanico);
   border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
@@ -95,10 +95,10 @@ body {
 
 .campos .adicionar:hover,
 .btn-primary:hover {
-    color: var(--ameixa-profunda);
-  background: var(--verde-eletrico);
+    color: var(--azul-noturno);
+  background: var(--laranja-vulcanico);
   transform: translateY(-1px);
-  box-shadow: var(--verde-eletrico);
+  box-shadow: var(--laranja-vulcanico);
 }
 
 .mensagem-erro {
@@ -123,7 +123,7 @@ ul.lista {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 12px 14px;
-  color: var(--verde-eletrico);
+  color: var(--laranja-vulcanico);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   transition: border-color 0.2s ease, transform 0.15s ease;
 }
