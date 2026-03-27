@@ -46,7 +46,7 @@ function Home() {
       {produtos.map( produto => (
           <li key={produto.id} className='item-lista'>
             <div>{produto.nome}</div>
-            <button onClick={() => deletarProduto(produto.id)}>Deletar</button>
+            <button onClick={() => deletarProduto(produto.id)}>❌</button>
           </li>
         ))
       }

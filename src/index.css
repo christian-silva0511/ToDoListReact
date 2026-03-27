@@ -6,12 +6,11 @@
   --surface-2: #1f2937;
   --text: #e5e7eb;
   --muted: #9ca3af;
-  --primary: #38bdf8;
+  --primary: #FF4103;
   --accent: #22c55e;
   --danger: #e93636;
   --border: #334155;
   --azul-noturno: #001621;
-  --laranja-vulcanico: #FF4103;
   --shadow: 0 10px 30px rgba(15, 23, 42, 0.4);
 }
 
@@ -36,9 +35,8 @@ body {
 
 .tarefas h1 {
   font-size: 2rem;
-  letter-spacing: -1px;
-  margin-bottom: 1rem;
-  color: var(--laranja-vulcanico);
+  margin-bottom: 2rem;
+  color: var(--primary);
 }
 
 .tarefas {
@@ -63,7 +61,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--azul-noturno);
-  color: var(--laranja-vulcanico);
+  color: var(--primary);
   padding: 10px 14px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
@@ -76,15 +74,15 @@ body {
 .campos input:focus {
   background: var(--azul-noturno);  
   outline: none;
-  border-color: var(--laranja-vulcanico);
-  box-shadow: var(--laranja-vulcanico);
-  color: var(--laranja-vulcanico);
+  border-color: var(--primary);
+  box-shadow: var(--primary);
+  color: var(--primary);
 }
 
 .campos .adicionar,
 .btn-primary {
   color: var(--azul-noturno);
-  background: var(--laranja-vulcanico);
+  background: var(--primary);
   border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
@@ -95,10 +93,14 @@ body {
 
 .campos .adicionar:hover,
 .btn-primary:hover {
-    color: var(--azul-noturno);
-  background: var(--laranja-vulcanico);
-  transform: translateY(-1px);
-  box-shadow: var(--laranja-vulcanico);
+  background: var(--primary);
+  box-shadow: var(--primary);
+  border: 0;
+}
+.campos .adicionar:focus,
+.btn-primary:focus {
+  background: var(--primary);
+  box-shadow: var(--primary);
 }
 
 .mensagem-erro {
@@ -123,7 +125,7 @@ ul.lista {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 12px 14px;
-  color: var(--laranja-vulcanico);
+  color: var(--primary);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
   transition: border-color 0.2s ease, transform 0.15s ease;
 }
