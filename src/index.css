@@ -1,60 +1,158 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-h1{
-    letter-spacing: -2px;
+:root {
+  --bg: #0f172a;
+  --surface: #111827;
+  --surface-2: #1f2937;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #38bdf8;
+  --accent: #22c55e;
+  --danger: #f87171;
+  --border: #334155;
+  --ameixa-profunda: #2D1E2F;
+  --verde-eletrico: #A7F432;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.4);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  min-height: 100%;
+  background-color: var(--ameixa-profunda);
+  color: var(--text);
+}
+
+body {
+  line-height: 1.5;
+  padding: 24px;
+  background-color: var(--ameixa-profunda)!important;
+}
+
+.tarefas h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+  color: var(--verde-eletrico);
+}
+
+.tarefas {
+  max-width: 760px;
+  width: 100%;
+  margin: auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.campos {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.campos input {
+  flex: 1 1 240px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--ameixa-profunda);
+  color: var(--verde-eletrico);
+  padding: 10px 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campos input:focus {
+  background: var(--ameixa-profunda);  
+  outline: none;
+  border-color: var(--verde-eletrico);
+  box-shadow: var(--verde-eletrico);
+  color: var(--verde-eletrico);
+}
+
+.campos .adicionar,
 .btn-primary {
-  background-color: #ff5733;
-  border-color: #ff5733;
-}
-.campos{
-    display: flex;
-    gap: 16px;
-}
-.campos .adicionar{
-    background: green;
-    border:inherit;
-}
-.campos .adicionar:hover{
-    background: #8ec738;
-}
-.mensagem-erro{
-    color: red;
-    margin: 20px 0;
-}
-.tarefas{
-    max-width: 600px;
-    width: 100%;
-    margin: 40px auto;
-    padding: 0 16px;
-}
-.tarefas .alert-danger{
-    margin: 16px 0;
+  color: var(--ameixa-profunda);
+  background: var(--verde-eletrico);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 16px;
+  font-weight: 500;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-ul.lista{
-    padding: 24px 0 0;
+.campos .adicionar:hover,
+.btn-primary:hover {
+    color: var(--ameixa-profunda);
+  background: var(--verde-eletrico);
+  transform: translateY(-1px);
+  box-shadow: var(--verde-eletrico);
 }
-.item-lista{
-    display: flex;
-    gap: 16px;
-    border: 1px solid #ccc;
-    padding: 8px 16px;
-    border-radius: 8px;
-    justify-content: space-between;
-    margin-bottom: 8px;
+
+.mensagem-erro {
+  color: var(--danger);
+  margin: 12px 0;
+  font-weight: 600;
 }
-.item-lista button{
-    border: 0;
-    background: inherit;
-    color: red;
+
+ul.lista {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-input{
-    margin-right: 10px;
+
+.item-lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: var(--verde-eletrico);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.item-lista:hover {
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.item-lista span {
+  color: var(--text);
+  flex: 1;
+  word-break: break-word;
+}
+
+.item-lista button {
+  border: 1px solid var(--danger);
+  background: rgba(248, 113, 113, 0.16);
+  color: var(--danger);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.item-lista button:hover {
+  background: rgba(248, 113, 113, 0.35);
+  transform: scale(1.02);
+}
+
+.tarefas .alert-danger {
+  margin: 16px 0;
+}
+
+input {
+  margin-right: 10px;
 }
