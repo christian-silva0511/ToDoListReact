@@ -8,7 +8,7 @@
   --muted: #9ca3af;
   --primary: #38bdf8;
   --accent: #22c55e;
-  --danger: #f87171;
+  --danger: #e93636;
   --border: #334155;
   --ameixa-profunda: #2D1E2F;
   --verde-eletrico: #A7F432;
@@ -48,7 +48,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 16px;
   box-shadow: var(--shadow);
-  padding: 24px;
+  padding: 40px 24px;
 }
 
 .campos {
@@ -66,6 +66,11 @@ body {
   color: var(--verde-eletrico);
   padding: 10px 14px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campos input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
 }
 
 .campos input:focus {
