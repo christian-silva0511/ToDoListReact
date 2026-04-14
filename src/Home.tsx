@@ -1,29 +1,36 @@
 import {useRef, useState} from 'react'
-import {v4} from 'uuid'
+import {v4 as uuidv4} from 'uuid'
 
- 
+type Produto = {
+  id: string
+  nome: string
+}
 
 function Home() { 
-  const [produtos, setProdutos] = useState([])
-  const inputRef = useRef()
-  const [mensagemErro, setmensagemErro] = useState('')
+  const [produtos, setProdutos] = useState<Produto[]>([])
+  const inputRef = useRef<HTMLInputElement | null>(null)
+  const [mensagemErro, setMensagemErro] = useState('')
   
 
   function cliqueiNoBotao(){
-    const valor = inputRef.current.value.trim()
-    
+    const inputEl = inputRef.current
+    const valor = inputEl?.value.trim() ?? ''
 
     if(valor === ''){
-      setmensagemErro('Você precisa digitar algo!')
-
-    }else{
-      setmensagemErro('')
-      setProdutos([{id: v4(), nome: inputRef.current.value}, ...produtos])
-      inputRef.current.value = ''
+      setMensagemErro('Você precisa digitar algo!')
+      return
     }
+
+    if (!inputEl) {
+      return
+    }
+
+    setMensagemErro('')
+    setProdutos([{id: uuidv4(), nome: inputEl.value}, ...produtos])
+    inputEl.value = ''
   }
 
-  function deletarProduto(id){
+  function deletarProduto(id: string){
     setProdutos(produtos.filter(produto => produto.id !== id))
   }
 
