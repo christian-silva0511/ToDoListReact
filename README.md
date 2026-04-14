@@ -2,7 +2,7 @@
 
 Uma aplicação simples de lista de tarefas desenvolvida em **JavaScript** e **React**.
 
-🔗 [Acesse o projeto publicado](https://to-do-list-react-f2eh.vercel.app/)
+🔗 <a href="https://to-do-list-react-f2eh.vercel.app/" target="_blank" rel="noopener noreferrer">Acesse o projeto publicado</a>
 
 ---
 
